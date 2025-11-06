@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*Import de fonts muito grande (com muiitos valores) não se dão bem com react*/
+*{ margin: 0; } /*quando mudo aqui, tudo muda, se ta funcionando assim, assim vai ficar*/
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between; /* MUDEI: agora distribui espaço entre logo e menu */
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  z-index: 1000;
+  margin-top: -5px;
+  box-shadow: 0 1px 22.3px rgba(0, 0, 0, 0.40);
+}
+
+.logo {
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre img e texto */
+}
+
+.img-logo {
+  width: 114px;
+  height: 92px;
+  margin-left: -25px;
+}
+
+.text-logo {
+    cursor: pointer;
+  margin: 0;
+  color: #49A75D;
+  width: 161px;
+  height: 33px;
+  top: 42px;
+  margin-top: 20px;
+  margin-left: -20px;
+  font-family: 'Inter', sans-serif; 
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0; 
+  transition: transform 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
+}
+
+.text-logo:hover {
+
+  transform: translateY(-3px) scale(1.03);
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+
+}
+
+.menu li {
+  color: #686868;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+    font-family: 'Inter', sans-serif; 
+}
+
+.menu li:hover {
+  color: #007bff; 
+}
+
+

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.inter {
+  font-family: 'inter', 'sans-serif';
+}
+
+.LeagueAs {
+  font-family: "League Spartan", sans-serif; 
+}
+
+.btn {
+  cursor: pointer;
+  transition: background-position 0.4s ease-out, transform 0.4s ease;
+}
+
+.btn:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(142, 53, 234, 0.4); 
+}
+ 
+.Nunito {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3);
+}
