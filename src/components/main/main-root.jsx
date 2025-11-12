@@ -9,7 +9,7 @@ import Impacto from './main-content/Impacto'
 function main () {
   return (
     <>
-      <main className='pt-[120px] '>
+      <main className=' pt-[120px] '>
         <Home />
 
         <Sobre />

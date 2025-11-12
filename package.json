@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Coxaxi.github.io/NeoTrash",
   "name": "neo-trash-ppa",
   "private": true,
   "version": "0.0.0",
@@ -14,7 +13,8 @@
   },
   "dependencies": {
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwind-scrollbar": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

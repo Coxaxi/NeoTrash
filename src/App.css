@@ -1,57 +1,37 @@
-/* --- Configuração Padrão (Desktop) --- */
-
-/* O aviso começa escondido */
-#responsive-warning-overlay {
-  display: none; 
-}
-
-/* O conteúdo do site começa visível */
-#app-content {
-  display: block; /* ou 'flex', 'grid', etc., o que você usar */
-}
-
-@media (max-width: 1330px) {
-
-  /* 1. ESCONDE o conteúdo do seu site */
-  #app-content {
-    display: none !important; /* !important garante que vai sobrescrever */
-  }
-
-  /* 2. MOSTRA o aviso e o estiliza */
-  #responsive-warning-overlay {
-    display: flex; /* Liga o aviso */
-    justify-content: center;
-    align-items: center;
-    
-    /* Estilo de tela cheia */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #1a1a1a; /* Fundo escuro */
-    color: #f0f0f0;
-    z-index: 9999;
-  }
-  
-  .warning-box {
-    text-align: center;
-    padding: 20px;
-    max-width: 90%;
-    border: 1px solid #555;
-    border-radius: 10px;
-    background-color: #2b2b2b;
-  }
-  
-  .warning-box h1 {
-    color: #ffc107; /* Um tom de "aviso" */
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-  
-  .warning-box p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
+@media (max-width: 1024px) {
+  .nullAll {
+    display: none;
   }
 }
+
+/* Media Query: Celular (≤768px) - Stack completo, otimizações mobile */
+@media (max-width: 768px) {
+  .null {
+    display: block;
+  }
+
+  /* Reduz motion para acessibilidade */
+  @media (prefers-reduced-motion: reduce) {
+    .responsive-wrapper * {
+      transition: none;
+    }
+  }
+}
+
+.imgHomeResponsive1 {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .imgHomeResponsive1 {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .imgHomeResponsive1 {
+        display: none;
+    }
+}
+
+

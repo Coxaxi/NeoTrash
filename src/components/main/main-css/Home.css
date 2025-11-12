@@ -43,8 +43,6 @@ h4 {
 }
 
 #cont2 {
-  min-width: 548px;
-  min-height: 326px;
   box-shadow: 0 1px 22.3px rgba(0, 0, 0, 0.40);
   border-radius: 31px;
 }
@@ -56,7 +54,6 @@ h4 {
   max-height: 115px;
   border-radius: 10px;
   cursor: pointer;
-
 }
 
 .btnEfect {

@@ -1,9 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html { @apply scroll-smooth; }
 
-*{ margin: 0;}
+html {
+  @apply scroll-smooth;
+}
+
+* {
+  margin: 0;
+}
+
 /*Pode ser um futuro problema, pois estou */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
@@ -15,7 +21,7 @@ div {
 }
 
 .LeagueAs {
-  font-family: "League Spartan", sans-serif; 
+  font-family: "League Spartan", sans-serif;
 }
 
 .inter {
@@ -25,7 +31,7 @@ div {
 .btn {
   cursor: pointer;
 }
- 
+
 .Nunito {
   font-family: "Nunito Sans", sans-serif;
 }
@@ -37,4 +43,8 @@ div {
 
 .btnDefault:hover {
   transform: translateY(-1px);
+}
+
+html {
+  scroll-behavior: smooth;
 }

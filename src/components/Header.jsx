@@ -1,7 +1,7 @@
 import logo from './imgs/logo.png'
 import './css/cabecalho.css'
 
-function Header () {
+function Header() {
   return (
     <div className="Header">
       <div className="logo">
@@ -11,17 +11,16 @@ function Header () {
 
       <div className="menu" >
         <ul>
-          <li onClick={() => document.getElementById('Home')?.scrollIntoView({ behavior: 'smooth' })}>Home</li>
-          <li onClick={() => document.getElementById('Sobre')?.scrollIntoView({ behavior: 'smooth' })}>Sobre</li>
-          <li onClick={() => document.getElementById('ComoFunciona')?.scrollIntoView({ behavior: 'smooth' })}>Como Funciona</li>
-          <li onClick={() => document.getElementById('Coleta')?.scrollIntoView({ behavior: 'smooth' })}>Pontos de Coleta</li>
-          <li onClick={() => document.getElementById('Produtos')?.scrollIntoView({ behavior: 'smooth' })}>Produtos</li>
-          <li onClick={() => document.getElementById('Parceiros')?.scrollIntoView({ behavior: 'smooth' })}>Parceiros</li>
-          <li onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>Contato</li>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Sobre">Sobre</a></li>
+          <li><a href="#ComoFunciona">Como Funciona</a></li>
+          <li><a href="#Coleta">Coleta</a></li>
+          <li><a href="#Produtos">Produtos</a></li>
+          <li><a href="#Parceiros">Parceiros</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
     </div>
   );
 }
-
 export default Header
