@@ -38,9 +38,9 @@ function Rewards() {
            Cadastre-se agora e receba 50 pontos de bônus para começar sua jornada sustentável
           </p>
           
-          <div className='mt-6 md:mt-[40px] btn bg-white w-full max-w-[289px] h-auto md:h-[73px] rounded-[14px] flex items-center justify-center py-4 md:py-0'>
+          <button className='mt-6 md:mt-[40px] btn bg-white w-full max-w-[289px] h-auto md:h-[73px] rounded-[14px] flex items-center justify-center py-4 md:py-0'>
           <h1 className="LeagueAs text-[#A74FEF] text-center text-xl md:text-[28px] font-medium" >Participar e Ganhar</h1>
-          </div>
+          </button>
         </div>
       </div>
     </>

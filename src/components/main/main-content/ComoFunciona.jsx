@@ -5,7 +5,7 @@ import Selo from '../main-imgs/ComoFunciona/selo.png'
 
 export default function ComoFunciona() {
     return (
-        <div id="ComoFunciona" className='comofuncionaresponsividade pt-12 md:pt-[100px] pb-12 md:pb-[100px] flex flex-col items-center bg-[#F2F9FF]'>
+        <div id="ComoFunciona" className='comofuncionaresponsividade pt-[150px] pb-12 md:pb-[100px] flex flex-col items-center bg-[#F2F9FF]'>
             <h1 className='inter text-3xl md:text-[36px] font-bold text-center'>Como Funciona o Ciclo de Reciclagem</h1>
             <p className='text-center max-w-full md:max-w-[582px] inter text-sm md:text-[16px] font-medium mt-4'>Nosso processo é simples, transparente e eficiente. Acompanhe cada etapa da transformação dos seus eletrônicos em produtos sustentáveis.</p>
 

@@ -1,6 +1,6 @@
-@media (max-width: 1024px) {
+@media (max-width: 450px  ) {
   .nullAll {
-    display: none;
+    
   }
 }
 
@@ -16,22 +16,6 @@
       transition: none;
     }
   }
-}
-
-.imgHomeResponsive1 {
-    display: none;
-}
-
-@media (max-width: 1024px) {
-    .imgHomeResponsive1 {
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .imgHomeResponsive1 {
-        display: none;
-    }
 }
 
 

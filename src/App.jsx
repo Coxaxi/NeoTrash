@@ -13,7 +13,7 @@ function App() {
       <div className=' bg-[#000000c5]'>
         <div id="Home"></div>
 
-        <div className=" max-w-[2000px] m-auto ">
+        <div className=" max-w-[1280px] m-auto ">
           <Header />
 
           <Main />

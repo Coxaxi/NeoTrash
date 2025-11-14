@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
 
-p {
-  color: #5E5E5E;
+a {
+  color: #808080;
+}
+
+a:hover {
+  color:  #17a050b2;
 }
 
 h2,
@@ -48,10 +52,6 @@ h4 {
 }
 
 .bloco {
-  min-width: 218px;
-  min-height: 115px;
-  max-width: 218px;
-  max-height: 115px;
   border-radius: 10px;
   cursor: pointer;
 }

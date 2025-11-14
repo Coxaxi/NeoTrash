@@ -15,9 +15,9 @@ export default function Cards() {
         <p className="inter text-base md:text-[20px] text-center">Necessário:</p>
         <h1 className="inter text-xl md:text-[24px] font-bold text-center">100 pontos</h1>
       </div>
-      <div className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
+      <button className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
       <h1 className="m-auto text-center">Saiba Mais</h1>
-      </div>
+      </button>
     </div>
 
     <div className="container card pl-6 md:pl-[36px] pr-6 md:pr-[36px] py-6 md:p-3 rounded-[15px] bg-white w-full max-w-[472px] min-h-[auto] md:h-[425px] flex flex-col items-center">
@@ -28,9 +28,9 @@ export default function Cards() {
       <p className="inter text-base md:text-[20px] text-center">Necessário:</p>
       <h1 className="inter text-xl md:text-[24px] font-bold text-center">300 pontos</h1>
     </div>
-    <div className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
+    <button className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
     <h1 className="m-auto text-center">Saiba Mais</h1>
-    </div>
+    </button>
     </div>
 
     <div className="container card pl-6 md:pl-[36px] pr-6 md:pr-[36px] py-6 md:p-3 rounded-[15px] bg-white w-full max-w-[472px] min-h-[auto] md:h-[425px] flex flex-col items-center">
@@ -41,9 +41,9 @@ export default function Cards() {
       <p className="inter text-base md:text-[20px] text-center">Necessário:</p>
       <h1 className="inter text-xl md:text-[24px] font-bold text-center">200 pontos</h1>
     </div>
-    <div className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
+    <button className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
     <h1 className="m-auto text-center">Saiba Mais</h1>
-    </div>
+    </button>
     </div>
 
     <div className="container card pl-6 md:pl-[36px] pr-6 md:pr-[36px] py-6 md:p-3 rounded-[15px] bg-white w-full max-w-[472px] min-h-[auto] md:h-[425px] flex flex-col items-center">
@@ -54,9 +54,9 @@ export default function Cards() {
       <p className="inter text-base md:text-[20px] text-center">Necessário:</p>
       <h1 className="inter text-xl md:text-[24px] font-bold text-center">150 pontos</h1>
     </div>
-    <div className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
+    <button className="btn flex items-center mt-3 md:mt-[12px] bg-gradient-to-r from-[#8E35EA] to-[#376DEC] rounded-[20px] w-full max-w-[384px] h-auto md:h-[65px] inter text-white text-lg md:text-[24px] py-4 md:py-0">
     <h1 className="m-auto text-center">Saiba Mais</h1>
-    </div>
+    </button>
     </div>
   </div>
   );

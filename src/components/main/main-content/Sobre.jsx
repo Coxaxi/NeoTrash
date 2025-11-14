@@ -5,8 +5,8 @@ import rgbgradient from  '../main-imgs/Sobre-imgs/rgbgradient.png'
 
 function Sobre() {
   return (
-    <div id="Sobre" className='sobresponsividade pai min-h-[auto] p-6 md:p-[114px] bg-white flex flex-col items-center'>
-      <h1 className='text-center text-3xl sm:text-4xl md:text-[40px] font-bold'>Sobre o Sistema NeoTrash</h1>
+    <div id="Sobre" className=' sobresponsividade pai min-h-[auto] p-6 md:p-[114px] bg-white flex flex-col items-center'>
+      <h1 className='pt-[90px] text-center text-3xl sm:text-4xl md:text-[40px] font-bold'>Sobre o Sistema NeoTrash</h1>
       <p className='text-center desc1 text-sm md:text-[16px] mt-2'>
         O NeoTrash é uma plataforma inovadora que conecta pessoas em um ciclo
         inteligente  

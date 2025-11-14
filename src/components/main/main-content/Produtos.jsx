@@ -1,10 +1,9 @@
-import '../main-css/Produtos.css'
 import Cards from './Produtos/Cards.jsx'
 
 
 export default function Produtos() {
   return (
-    <div className='produtosresponsividade bg-white flex flex-col items-center'>
+    <div className='pt-[100px] produtosresponsividade bg-white flex flex-col items-center'>
       <div id="Produtos" className="flex flex-col items-center justify-center w-full px-4 md:px-0">
         <div className="pt-16 md:pt-[150px] flex flex-col items-center justify-center">
           <h1 className="LeagueAs text-3xl md:text-[40px] font-semibold text-center">
@@ -15,8 +14,8 @@ export default function Produtos() {
             arte criadas a partir de componentes eletrônicos reciclados.
           </p>
 
-          <div className="logo mb-12 md:mb-20">
-            <h1 className="text-log text-2xl md:text-3xl">Nossos Produtos:</h1>
+          <div >
+            <h1 className="text-[#49A75D]  LeagueAs text-3xl md:text-[40px] font-semibold text-center">Nossos Produtos:</h1>
           </div>
         </div>
 
@@ -33,11 +32,11 @@ export default function Produtos() {
             usando componentes dos seus próprios eletrônicos doados. Uma forma
             especial de dar nova vida aos seus dispositivos.
           </p>
-          <div className="transition hover:-translate-y-1 hover:scale-105 duration-300 cursor-pointer w-full max-w-[275px] h-auto md:h-[65px] justify-center rounded-[10px] bg-gradient-to-r from-[#16A151] to-[#2464E8] flex items-center py-4 md:py-0">
+          <button className="transition hover:-translate-y-1 hover:scale-105 duration-300 cursor-pointer w-full max-w-[275px] h-auto md:h-[65px] justify-center rounded-[10px] bg-gradient-to-r from-[#16A151] to-[#2464E8] flex items-center py-4 md:py-0">
             <h2 className="text-white text-xl md:text-[24px] font-semibold text-center">
               Solicitar Personalização
             </h2>
-          </div>
+          </button>
         </div>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8'>

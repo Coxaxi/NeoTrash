@@ -3,7 +3,7 @@ import Cards from './coleta/cards.jsx'
 
 function Coleta() {
   return (
-    <div id='Coleta' className=" coletaresponsividade bg-white pb-8 md:pb-[43px] flex flex-col items-center px-4 md:px-0">
+    <div id='Coleta' className=" coletaresponsividade bg-white pb-8 md:pb-[43px] pt-[150px] flex flex-col items-center px-4 md:px-0">
       <div className="flex flex-col items-center">
         <h1 className="text-center text-3xl md:text-[36px] font-semibold text-black">
           Pontos de Coleta
@@ -39,7 +39,7 @@ function Coleta() {
           positivo do NeoTrash em sua comunidade.
         </p>
 
-        <h1
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -53,7 +53,7 @@ function Coleta() {
         hover:shadow-xl btn m-auto mt-12 md:mt-[20px] w-full md:w-[376px] md:h-[80px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Cadastrar Instituição
-        </h1>
+        </button>
       </div>
     </div>
 

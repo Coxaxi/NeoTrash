@@ -39,7 +39,7 @@ function Cards() {
           </div>
         </div>
 
-        <h1
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -53,7 +53,7 @@ function Cards() {
         hover:shadow-xl btn m-auto mt-6 md:mt-[35px] w-full md:w-[300px] lg:w-[376px] h-[56px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Ver no Mapa
-        </h1>
+        </button>
       </div>
 
       <div
@@ -84,7 +84,7 @@ function Cards() {
           </div>
         </div>
 
-        <h1
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -98,7 +98,7 @@ function Cards() {
         hover:shadow-xl btn m-auto mt-6 md:mt-[35px] w-full md:w-[300px] lg:w-[376px] h-[56px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Ver no Mapa
-        </h1>
+        </button>
       </div>
 
       <div
@@ -129,7 +129,8 @@ function Cards() {
           </div>
         </div>
 
-        <h1
+
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -143,7 +144,7 @@ function Cards() {
         hover:shadow-xl btn m-auto mt-6 md:mt-[35px] w-full md:w-[300px] lg:w-[376px] h-[56px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Ver no Mapa
-        </h1>
+        </button>
       </div>
 
       <div
@@ -176,7 +177,8 @@ function Cards() {
           </div>
         </div>
 
-        <h1
+
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -190,7 +192,7 @@ function Cards() {
         hover:shadow-xl btn m-auto mt-6 md:mt-[35px] w-full md:w-[300px] lg:w-[376px] h-[56px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Ver no Mapa
-        </h1>
+        </button>
       </div>
 
       <div
@@ -221,7 +223,8 @@ function Cards() {
           </div>
         </div>
 
-        <h1
+
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -235,7 +238,7 @@ function Cards() {
         hover:shadow-xl btn m-auto mt-6 md:mt-[35px] w-full md:w-[300px] lg:w-[376px] h-[56px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Ver no Mapa
-        </h1>
+        </button>
       </div>
 
       <div
@@ -268,7 +271,8 @@ function Cards() {
           </div>
         </div>
 
-        <h1
+
+        <button
           className="
         bg-[length:200%_auto]
         
@@ -282,7 +286,7 @@ function Cards() {
         hover:shadow-xl btn m-auto mt-6 md:mt-[35px] w-full md:w-[300px] lg:w-[376px] h-[56px] flex items-center justify-center rounded-[10px] bg-gradient-to-r from-[#2FC850] to-[#0942FF] btnFont text-center text-white font-semibold text-lg md:text-[24px]"
         >
           Ver no Mapa
-        </h1>
+        </button>
       </div>
     </div>
   )
