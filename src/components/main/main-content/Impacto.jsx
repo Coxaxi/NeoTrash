@@ -1,7 +1,4 @@
-import u from '../main-imgs/impacto-img/u.png'
-import d from '../main-imgs/impacto-img/d.png'
-import t from '../main-imgs/impacto-img/t.png'
-import q from '../main-imgs/impacto-img/q.png'
+// Os imports de 'u', 'd', 't', 'q' foram removidos daqui
 
 export default function Impacto() {
   return (
@@ -24,13 +21,16 @@ export default function Impacto() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16 md:mb-20 w-full max-w-6xl">
         {[
-          { icon: u, value: "2.5 toneladas", label: "Resíduos Transformados" },
-          { icon: d, value: "1,250+", label: "Participantes Ativos" },
-          { icon: t, value: "3.2+ toneladas", label: "CO² Evitado" },
-          { icon: q, value: "100+", label: "Produtos Criados" }
+          // --- 👇 MUDANÇAS AQUI 👇 ---
+          { icon: "/main-imgs/impacto-img/u.png", value: "2.5 toneladas", label: "Resíduos Transformados" },
+          { icon: "/main-imgs/impacto-img/d.png", value: "1,250+", label: "Participantes Ativos" },
+          { icon: "/main-imgs/impacto-img/t.png", value: "3.2+ toneladas", label: "CO² Evitado" },
+          { icon: "/main-imgs/impacto-img/q.png", value: "100+", label: "Produtos Criados" }
+          // --- 👆 MUDANÇAS AQUI 👆 ---
         ].map((stat, index) => (
           <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 md:p-8 flex flex-col items-center text-center group hover:transform hover:-translate-y-2">
             <div className="w-16 h-16 md:w-20 md:h-20 bg-green-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              {/* Esta linha agora funciona, pois 'stat.icon' é a string de caminho correta */}
               <img src={stat.icon} alt="" className="w-8 h-8 md:w-10 md:h-10" />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-2">{stat.value}</h3>
