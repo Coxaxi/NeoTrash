@@ -18,7 +18,7 @@ export default function ComoFunciona() {
                     <p className='text-center mt-4 md:mt-[20px] text-base md:text-[18px] font-medium text-[#000] inter'>Coletores parceiros retiram os dispositivos nos pontos de coleta ou diretamente na residência dos doadores.</p>
                 </div>
                 <div className='rounded-[20px] bg-white w-full flex flex-col items-center justify-center pt-6 md:pt-[21px] pb-6 md:pb-[21px] px-4'>
-                    <img src="/main-imgs/ComoFunciona/lupa.png" alt="" className='w-16 md:w-auto' />
+                    <img src="/main-imgs/ComoFunciona/Lupa.png" alt="" className='w-16 md:w-auto' />
                     <p className='mt-4 md:mt-[20px] inter text-xs md:text-[14px] text-[#7E7E7E]'>PASSO 3</p>
                     <h1 className='text-center mt-4 md:mt-[20px] text-base md:text-[18px] font-bold inter'>Avaliação e Transformação</h1>
                     <p className='text-center mt-4 md:mt-[20px] text-base md:text-[18px] font-medium text-[#000] inter'>Os eletrônicos são avaliados, desmontados e seus componentes são transformados em novos produtos sustentáveis.</p>

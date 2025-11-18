@@ -23,7 +23,7 @@ function Cards() {
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[17px]">À Decidir</h1>
             </div>
             <div className="flex items-center mt-4 md:mt-[31px]">
-              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/on.png" alt="" />
+              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/On.png" alt="" />
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[14px]">Seg-Sex: 8h às 17h</h1>
             </div>
           </div>
@@ -61,7 +61,7 @@ function Cards() {
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[17px]">À Decidir</h1>
             </div>
             <div className="flex items-center mt-4 md:mt-[31px]">
-              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/on.png" alt="" />
+              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/On.png" alt="" />
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[14px]">Seg-Sáb: 9h às 18h</h1>
             </div>
           </div>
@@ -99,7 +99,7 @@ function Cards() {
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[17px]">À Decidir</h1>
             </div>
             <div className="flex items-center mt-4 md:mt-[31px]">
-              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/on.png" alt="" />
+              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/On.png" alt="" />
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[14px]">Seg-Sex: 8h às 18h</h1>
             </div>
           </div>
@@ -137,7 +137,7 @@ function Cards() {
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[17px]">À Decidir</h1>
             </div>
             <div className="flex items-center mt-4 md:mt-[31px]">
-              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/on.png" alt="" />
+              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/On.png" alt="" />
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[14px]">
                 Todos os Dias: 8h às 20h
               </h1>
@@ -177,7 +177,7 @@ function Cards() {
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[17px]">À Decidir</h1>
             </div>
             <div className="flex items-center mt-4 md:mt-[31px]">
-              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/on.png" alt="" />
+              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/On.png" alt="" />
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[14px]">Seg-Sex: 7h às 22h</h1>
             </div>
           </div>
@@ -215,7 +215,7 @@ function Cards() {
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[17px]">À Decidir</h1>
             </div>
             <div className="flex items-center mt-4 md:mt-[31px]">
-              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/on.png" alt="" />
+              <img className="w-8 md:w-[36px] h-8 md:h-[36px]" src="/main-imgs/Coleta-imgs/On.png" alt="" />
               <h1 className="text-base md:text-[20px] ml-3 md:ml-[14px]">
                 Todos os dias: 10h às 22h
               </h1>
