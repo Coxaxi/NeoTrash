@@ -1,119 +1,137 @@
 import { useEffect, useState } from 'react';
-import { Container } from './MenuHamburguer';
+import { createPortal } from 'react-dom';
 import logo from './imgs/logo.png'; // Importe a logo para usar no sidebar
 
 export function Menu() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const closeMenu = () => {
-        setMenuOpen(false);
-    };
-
-    const handleResize = () => {
-        const mobile = window.innerWidth <= 1024;
-        setIsMobile(mobile);
-        if (!mobile) {
-            setMenuOpen(true); // Show menu on desktop
-        } else {
-            setMenuOpen(false); // Hide on mobile until toggled
-        }
-    };
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false);
 
     useEffect(() => {
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
+        const handleResize = () => {
+            const mobile = window.innerWidth <= 1024;
+            setIsMobile(mobile);
+            if (!mobile) setMenuOpen(false);
         };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     useEffect(() => {
-        const handleEsc = (event) => {
-            if (event.key === 'Escape' && menuOpen && isMobile) {
-                closeMenu();
-            }
-        };
-        window.addEventListener('keydown', handleEsc);
-
+        if (menuOpen && isMobile) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
         return () => {
-            window.removeEventListener('keydown', handleEsc);
+            document.body.style.overflow = 'unset';
         };
     }, [menuOpen, isMobile]);
 
-    return (
-        <Container isOpen={menuOpen} className="menu flex items-center" role="navigation" aria-label="Main menu">
-            {isMobile && (
-                <div className="hamburger absolute left-5 cursor-pointer w-[30px] h-[24px] flex flex-col justify-between" onClick={toggleMenu}>
-                    <span className={`line bg-[#686868] h-[4px] w-full rounded transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-[10px]' : ''}`}></span>
-                    <span className={`line bg-[#686868] h-[4px] w-full rounded transition-all duration-300 ${menuOpen ? 'scale-0' : ''}`}></span>
-                    <span className={`line bg-[#686868] h-[4px] w-full rounded transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-[10px]' : ''}`}></span>
-                </div>
-            )}
-            {menuOpen && isMobile && (
-                <div className="sidebar-header flex items-center justify-between p-4 border-b border-[#e5e7eb] bg-[#ffffff]">
-                    <div className="sidebar-logo flex items-center gap-2">
-                        <img src={logo} className="sidebar-img w-8 h-auto" alt="NeoTrash Logo" />
-                        <span className="sidebar-text text-xl text-[#333333] font-bold">NeoTrash</span>
+    const menuItems = [
+        { href: "#Home", label: "Home" },
+        { href: "#Sobre", label: "Sobre" },
+        { href: "#ComoFunciona", label: "Como Funciona" },
+        { href: "#Coleta", label: "Pontos de Coleta" },
+        { href: "#Produtos", label: "Produtos" },
+        { href: "#Parceiros", label: "Parceiros" },
+        { href: "#contato", label: "Contato" }
+    ];
+
+    // Mobile Menu Content (Drawer + Overlay)
+    const MobileMenu = (
+        <>
+            {/* Mobile Overlay */}
+            <div
+                className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-[9998] transition-opacity duration-300 ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                    }`}
+                onClick={closeMenu}
+            />
+
+            {/* Menu Drawer */}
+            <div className={`
+                fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl z-[9999] 
+                transform transition-transform duration-300 ease-out
+                ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
+            `}>
+                {/* Mobile Header */}
+                <div className="flex items-center justify-between p-6 border-b border-gray-100">
+                    <div className="flex items-center gap-3">
+                        <img src={logo} className="w-8 h-auto" alt="NeoTrash Logo" />
+                        <span className="text-lg font-bold text-[#333333]">NeoTrash</span>
                     </div>
-                    <button onClick={closeMenu} aria-label="Close menu" className="text-[#333333] text-[24px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#49A75D]">
-                        &times;
+                    <button
+                        onClick={closeMenu}
+                        className="p-2 text-gray-500 hover:text-[#49A75D] transition-colors"
+                    >
+                        <span className="text-2xl">&times;</span>
                     </button>
                 </div>
-            )}
-            <nav>
-                <ul className="flex flex-col-reverse list-none m-0 p-0 gap-0.5 lg:flex-row lg:gap-0.5">
-                    {/* Botão de fechar - visível apenas no mobile */}
-                    <li className="lg:hidden">
-                        
 
-                        <button
-                            onClick={closeMenu}
-                            aria-label="Fechar menu"
-                            className="text-gray-800 text-6xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary hover:text-primary transition-colors w-full text-left px-4 py-2"
-                        >
-                            ×
-                        </button>
-                    </li>
-
-                    {/* Itens do menu */}
-                    {[
-                        { href: "#Home", label: "Home" },
-                        { href: "#Sobre", label: "Sobre" },
-                        { href: "#ComoFunciona", label: "Como Funciona" },
-                        { href: "#Coleta", label: "Pontos de Coleta" },
-                        { href: "#Produtos", label: "Produtos" },
-                        { href: "#Parceiros", label: "Parceiros" },
-                        { href: "#contato", label: "Contato" }
-                    ].map((item, index) => (
-                        <li key={item.href} className={`
-                            text-gray-600 cursor-pointer px-4 py-2.5 transition-all
-                            text-xl font-semibold font-inter
-                            lg:text-gray-600 lg:text-lg lg:py-3 lg:px-4
-                            lg:hover:text-primary lg:hover:scale-105
-                            ${index === 0 ? 'mt-8 lg:mt-0' : 'mt-0'}
-                            border-b border-gray-100 lg:border-b-0
-                            hover:bg-gray-50 lg:hover:bg-transparent
-                        `}>
+                {/* Navigation Links */}
+                <ul className="flex flex-col p-4">
+                    {menuItems.map((item) => (
+                        <li key={item.href}>
                             <a
                                 href={item.href}
-                                className="no-underline text-inherit block w-full h-full"
-                                onClick={isMobile ? closeMenu : undefined}
+                                onClick={closeMenu}
+                                className="
+                                    block py-3 px-4 text-lg font-medium text-gray-600 rounded-lg
+                                    transition-all duration-200
+                                    hover:bg-green-50 hover:text-[#49A75D] hover:pl-6
+                                "
                             >
                                 {item.label}
                             </a>
                         </li>
                     ))}
                 </ul>
-            </nav>
-            {menuOpen && isMobile && (
-                <div className="overlay fixed top-0 left-0 w-full h-full bg-black/30 backdrop-filter backdrop-blur-sm z-[9]" onClick={closeMenu}></div>
+            </div>
+        </>
+    );
+
+    return (
+        <nav className="relative" role="navigation" aria-label="Main menu">
+            {/* Hamburger Button (Visible on Mobile) */}
+            {isMobile && (
+                <button
+                    onClick={toggleMenu}
+                    className="relative z-50 w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none"
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
+                >
+                    <span className={`block w-6 h-0.5 bg-[#49A75D] transition-all duration-300 ease-out ${menuOpen ? 'rotate-45 translate-y-2' : ''
+                        }`} />
+                    <span className={`block w-6 h-0.5 bg-[#49A75D] transition-all duration-300 ease-out ${menuOpen ? 'opacity-0' : ''
+                        }`} />
+                    <span className={`block w-6 h-0.5 bg-[#49A75D] transition-all duration-300 ease-out ${menuOpen ? '-rotate-45 -translate-y-2' : ''
+                        }`} />
+                </button>
             )}
-        </Container>
+
+            {/* Render Mobile Menu via Portal */}
+            {isMobile && createPortal(MobileMenu, document.body)}
+
+            {/* Desktop Menu (Visible on Desktop) */}
+            {!isMobile && (
+                <ul className="flex flex-row gap-0.5 items-center">
+                    {menuItems.map((item) => (
+                        <li key={item.href}>
+                            <a
+                                href={item.href}
+                                className="
+                                    block py-3 px-4 text-lg text-gray-600 font-semibold
+                                    hover:text-[#49A75D] hover:scale-105 transition-all duration-200
+                                "
+                            >
+                                {item.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </nav>
     );
 }

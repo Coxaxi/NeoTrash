@@ -1,27 +1,50 @@
 import logo from './imgs/logo.png';
-import './css/cabecalho.css';
 import { Menu } from './Menu';
+import { useState, useEffect } from 'react';
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="max-h-[100px] Header fixed top-0 left-0 w-full z-50 flex justify-between items-center px-5 py-4 bg-white lg:justify-between">
-      {/* Menu - aparece primeiro no mobile, mas reordenado no desktop */}
-      <div className="lg:order-1">
-        <Menu />
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/80 backdrop-blur-md shadow-sm py-2'
+          : 'bg-white py-4'
+        }`}
+    >
+      <div className="w-full px-5 lg:px-8">
+        <div className="flex justify-between items-center">
+
+          {/* Menu Section - Order 1 on Desktop (Right) */}
+          <div className="lg:order-1">
+            <Menu />
+          </div>
+
+          {/* Logo Section - Order 0 on Desktop (Left) */}
+          <div className="flex items-center justify-center lg:justify-start lg:order-0 lg:flex-1">
+            <img
+              src={logo}
+              className={`transition-all duration-300 ${scrolled ? 'w-[60px] lg:w-[90px] h-auto' : 'w-[80px] lg:w-[114px] h-auto'
+                }`}
+              alt="NeoTrash Logo"
+            />
+            <h1 className={`font-inter font-bold text-[#49A75D] ml-2 transition-all duration-300 ${scrolled ? 'text-[20px] lg:text-[28px]' : 'text-[24px] lg:text-[32px]'
+              }`}>
+              NeoTrash
+            </h1>
+          </div>
+
+        </div>
       </div>
-      
-      {/* Logo - centralizado no mobile, à esquerda no desktop */}
-      <div className="logo flex items-center justify-center lg:order-0 lg:flex-1 lg:justify-start">
-        <img 
-          src={logo} 
-          className="img-logo w-[80px] h-auto lg:w-[114px] lg:h-[92px]" 
-          alt="NeoTrash Logo" 
-        />
-        <h1 className="cursor-pointer m-0 text-[#49A75D] w-auto h-auto font-inter font-bold text-[24px] lg:text-[32px] lg:w-[161px] lg:h-[33px] ml-2">
-          NeoTrash
-        </h1>
-      </div>
-    </div>
+    </header>
   );
 }
 
