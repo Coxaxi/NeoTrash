@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { Link } from 'react-router-dom'; // Import Link
 import logo from './imgs/logo.png'; // Importe a logo para usar no sidebar
 
 export function Menu() {
@@ -53,7 +54,7 @@ export function Menu() {
 
             {/* Menu Drawer */}
             <div className={`
-                fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl z-[9999] 
+                fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl z-[9999]
                 transform transition-transform duration-300 ease-out
                 ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
             `}>
@@ -72,7 +73,7 @@ export function Menu() {
                 </div>
 
                 {/* Navigation Links */}
-                <ul className="flex flex-col p-4">
+                <ul className="flex flex-col p-4 gap-2">
                     {menuItems.map((item) => (
                         <li key={item.href}>
                             <a
@@ -88,6 +89,20 @@ export function Menu() {
                             </a>
                         </li>
                     ))}
+                    {/* Mobile Login Button */}
+                    <li>
+                        <Link
+                            to="/login"
+                            onClick={closeMenu}
+                            className="
+                                block py-3 px-4 text-lg font-medium text-white bg-[#49A75D] rounded-lg
+                                transition-all duration-200 text-center mt-4 shadow-md
+                                hover:bg-[#3d8b4d] hover:shadow-lg
+                            "
+                        >
+                            Login
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </>
@@ -116,13 +131,13 @@ export function Menu() {
 
             {/* Desktop Menu (Visible on Desktop) */}
             {!isMobile && (
-                <ul className="flex flex-row gap-0.5 items-center">
+                <ul className="flex flex-row gap-1 items-center">
                     {menuItems.map((item) => (
                         <li key={item.href}>
                             <a
                                 href={item.href}
                                 className="
-                                    block py-3 px-4 text-lg text-gray-600 font-semibold
+                                    block py-2 px-4 text-lg text-gray-600 font-semibold
                                     hover:text-[#49A75D] hover:scale-105 transition-all duration-200
                                 "
                             >
@@ -130,6 +145,18 @@ export function Menu() {
                             </a>
                         </li>
                     ))}
+                    {/* Desktop Login Button */}
+                    <li className="ml-4">
+                        <Link
+                            to="/login"
+                            className="
+                                block py-2 px-6 text-lg font-bold text-white bg-[#49A75D] rounded-full
+                                hover:bg-[#3d8b4d] hover:scale-105 transition-all duration-200 shadow-md
+                            "
+                        >
+                            Login
+                        </Link>
+                    </li>
                 </ul>
             )}
         </nav>
