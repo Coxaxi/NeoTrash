@@ -4,9 +4,9 @@ import ComoFunciona from './main-content/ComoFunciona'
 import Coleta from './main-content/Coleta'
 import Rewards from './main-content/Rewards'
 import Produtos from './main-content/Produtos'
-import Impacto from './main-content/Impacto'  
+import Impacto from './main-content/Impacto'
 
-function main () {
+function Main() {
   return (
     <>
       <main className='bg-white pt-[96px] '>
@@ -28,4 +28,4 @@ function main () {
   );
 }
 
-export default main;
+export default Main;
